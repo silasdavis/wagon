@@ -28,3 +28,10 @@ func TestNew(t *testing.T) {
 		t.Fatalf("0xff: operator %v is valid (should be invalid)", op2)
 	}
 }
+
+func TestGet(t *testing.T) {
+	op := Get(CurrentMemory)
+	if len(op.Name) == 0 {
+		t.Fatalf("Expected non-empty name for CurrentMemory op")
+	}
+}

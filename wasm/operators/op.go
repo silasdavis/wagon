@@ -85,3 +85,7 @@ func New(code byte) (Op, error) {
 	}
 	return op, nil
 }
+
+func Get(opcode byte) Op {
+	return ops[opcode]
+}
